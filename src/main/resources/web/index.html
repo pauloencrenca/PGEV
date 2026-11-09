@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#080b13">
+    <meta name="description"
+        content="PGEV — inteligência em estruturas de produtos, custos e planejamento de produção.">
+    <title>PGEV — Product Intelligence</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="#inicio" aria-label="PGEV, início"><span class="brand-mark"><svg
+                        viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <path d="M6 25V7l20 18V7M6 7h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg></span><span class="brand-copy"><strong>NEXORA<span
+                            class="brand-period">.</span></strong><small>PRODUCT INTELLIGENCE</small></span></a>
+            <div class="workspace-label"><span class="workspace-icon">◈</span><span><strong>Meu
+                        workspace</strong><small>Ambiente local</small></span><span class="chevron">⌄</span></div>
+            <div class="nav-title">MENU PRINCIPAL</div>
+            <nav class="nav-menu" aria-label="Menu principal"><a class="nav-item active" href="#inicio"><span
+                        class="nav-symbol">▦</span> Visão geral <span class="nav-arrow">↗</span></a><a class="nav-item"
+                    href="#formulas"><span class="nav-symbol">◇</span> Estrutura de produtos</a><a class="nav-item"
+                    href="#planejamento"><span class="nav-symbol">▤</span> Planejamento</a></nav>
+            <div class="sidebar-spacer"></div>
+            <div class="sidebar-card"><span class="sidebar-card-icon">✧</span><strong>Decisões mais
+                    inteligentes.</strong>
+                <p>Controle cada componente da sua produção com precisão.</p><span class="card-decoration">N / X</span>
+            </div>
+            <div class="sidebar-bottom"><span class="status-dot"></span>
+                <div><strong>Sistema operacional</strong><small>Java + SQLite · Local</small></div>
+            </div>
+        </aside>
+        <main class="main" id="inicio">
+            <header class="topbar">
+                <div class="breadcrumbs">Workspace <span>/</span> <strong>Visão geral</strong></div>
+                <div class="top-right"><span class="live-label"><span class="online-dot"></span> Ambiente
+                        ativo</span><span class="top-divider"></span><span class="avatar">NX</span></div>
+            </header>
+            <div class="content">
+                <section class="heading">
+                    <div>
+                        <div class="eyebrow"><span class="eyebrow-dot"></span> PLATAFORMA DE INTELIGÊNCIA DE PRODUTOS
+                        </div>
+                        <h1>Controle total.<br><em>Visão além.</em></h1>
+                        <p>Estruture produtos, gerencie componentes e transforme custos em decisões inteligentes.</p>
+                    </div><button class="primary new-product" id="btnNovo"><span class="button-plus">＋</span> Novo
+                        produto <span class="button-arrow">↗</span></button>
+                </section>
+                <section class="overview" aria-label="Indicadores">
+                    <div class="metric">
+                        <div class="metric-top"><span class="metric-label">PRODUTO ATIVO</span><span
+                                class="metric-icon">◈</span></div>
+                        <div class="metric-value" id="metricProduto">—</div>
+                        <div class="metric-hint"><span class="mini-dot"></span> Fórmula selecionada</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-top"><span class="metric-label">CUSTO UNITÁRIO</span><span
+                                class="metric-icon">↗</span></div>
+                        <div class="metric-value" id="metricCusto">—</div>
+                        <div class="metric-hint"><span class="mini-dot"></span> Valor consolidado da estrutura</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-top"><span class="metric-label">COMPONENTES</span><span
+                                class="metric-icon">▧</span></div>
+                        <div class="metric-value" id="metricComponentes">—</div>
+                        <div class="metric-hint"><span class="mini-dot"></span> Itens da fórmula ativa</div>
+                    </div>
+                </section>
+                <section class="panel" id="formulas">
+                    <div class="panel-head">
+                        <div>
+                            <div class="section-kicker"><span class="section-index">01</span> GESTÃO DE ESTRUTURA</div>
+                            <h2>Explosão de materiais <span class="heading-accent">↗</span></h2>
+                            <p>Explore a composição hierárquica e gerencie cada item do produto.</p>
+                        </div>
+                        <div class="product-picker"><label for="produto">PRODUTO SELECIONADO</label>
+                            <div class="select-row"><select id="produto"
+                                    aria-label="Selecionar produto"></select><button id="btnExcluirProduto"
+                                    class="danger-outline" title="Excluir produto selecionado">Excluir</button></div>
+                        </div>
+                    </div>
+                    <div id="msg" role="status" aria-live="polite"></div>
+                    <div class="tree-wrap">
+                        <div class="tree-head"><span>ESTRUTURA / COMPONENTES</span><span>GERENCIAMENTO</span></div>
+                        <ul class="arvore" id="arvore"></ul>
+                    </div>
+                </section>
+                <section class="panel production-panel" id="planejamento">
+                    <div class="panel-head">
+                        <div>
+                            <div class="section-kicker"><span class="section-index">02</span> PROJEÇÃO DE CUSTOS</div>
+                            <h2>Planejamento de produção <span class="heading-accent">↗</span></h2>
+                            <p>Simule a quantidade necessária de materiais e o investimento estimado.</p>
+                        </div>
+                        <div class="production-controls"><label for="qtd">UNIDADES A PRODUZIR</label>
+                            <div class="production-row"><input id="qtd" type="number" min="1" step="1"
+                                    value="100"><button class="primary" id="btnProduzir">Simular custos
+                                    <span>↗</span></button></div>
+                        </div>
+                    </div>
+                    <div class="tabela" id="producao">
+                        <div class="empty"><span class="empty-icon">▤</span><strong>Seu planejamento começa
+                                aqui</strong><span>Informe uma quantidade e clique em simular para visualizar o
+                                detalhamento.</span></div>
+                    </div>
+                </section>
+                <footer><span><strong>NEXORA.</strong> PRODUCT INTELLIGENCE</span><span>Árvore genérica <b>·</b>
+                        Explosão <b>·</b> Implosão</span><span>© 2026 NEXORA</span></footer>
+            </div>
+        </main>
+    </div>
+    <script src="/app.js" defer></script>
+</body>
+
+</html>

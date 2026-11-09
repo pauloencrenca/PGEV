@@ -1,0 +1,14 @@
+NEXORA — Product Intelligence
+
+Projeto Java + SQLite com interface escura e arquivos separados HTML, CSS e JavaScript.
+
+1. Abra esta pasta no VS Code com Java JDK 25 e Maven.
+2. Execute: mvn clean compile
+3. Execute no PowerShell: mvn exec:java "-Dexec.mainClass=formula.AppWeb"
+4. Acesse http://localhost:8080
+
+Para criar uma versão portátil Windows, execute CRIAR_PORTATIL.bat no computador de preparação.
+
+Arquivos visuais: src/main/resources/web/index.html, style.css, app.js.
+
+Obs.: a fonte usa Google Fonts quando há internet; sem internet, o sistema usa fontes locais.
