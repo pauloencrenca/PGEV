@@ -1,0 +1,37 @@
+
+# Arquivos compilados do Java
+target/
+*.class
+
+# Versão portátil e executáveis gerados
+PORTATIL_WINDOWS/
+*.exe
+
+# Bancos de dados locais
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Dependências e arquivos temporários
+node_modules/
+dist/
+build/
+*.log
+*.tmp
+
+# Configurações locais
+.vscode/
+.idea/
+*.iml
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Segredos e configurações privadas
+.env
+.env.*
+!.env.example
