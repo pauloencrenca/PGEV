@@ -35,8 +35,3 @@ Thumbs.db
 .env
 .env.*
 !.env.example
-
-# Scripts locais
-*.bat
-*.ps1
-*.exe
