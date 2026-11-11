@@ -35,3 +35,8 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Scripts locais
+CRIAR_PORTATIL.bat
+CRIAR_PORTATIL.ps1
+INICIAR.bat
